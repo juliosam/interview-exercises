@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App{
+  text-align: center;
+}
+
+.newest-activity{
+  color: salmon;
+}
+
+li span{
+  font-size: 10px;
+}
+
+li p{
+  margin-bottom: 1px;
+}
