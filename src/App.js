@@ -9,15 +9,15 @@ function App() {
     const interval = setInterval(()=>{setCount(count+1)},1000);
     return(()=>clearInterval(interval));
   });
-
+  //https://www.boredapi.com/api/activity/
   const [activityArray, setActivityArray] = useState([])
-
+   
   const fetcher = async ()=>{
-    const data = await fetch('https://www.boredapi.com/api/activity/')
+    const data = await fetch('https://api.imgflip.com/get_memes')
     const getResult= await data.json()
-    console.log(getResult)
-    setGeter(getResult.activity)
-    setActivityArray([...activityArray, getResult]) 
+    const currentResult = getResult.data.memes[Math.floor(Math.random()*100)]
+    setGeter(currentResult.name)
+    setActivityArray([...activityArray, currentResult]) 
   }
 
   const incrementer = () =>{
@@ -34,8 +34,8 @@ function App() {
         {activityArray.map(activity => {
           return (
             <li>
-              <p key={activity.key}>{activity.activity}</p>
-              <span> Category: {activity.type}</span>
+              <p key={activity.id} >{activity.name}</p>
+              <img src={activity.url}/>
             </li>
           )
         })}
