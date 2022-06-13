@@ -27,3 +27,9 @@ li span{
 li p{
   margin-bottom: 1px;
 }
+
+.memelist{
+  display: inline-block;
+  width: 270px;
+  margin: 10px 11px;
+}
