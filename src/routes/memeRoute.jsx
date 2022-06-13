@@ -1,11 +1,13 @@
+import { useLocation} from "react-router-dom";
 
-const MemeRoute = ({meme}) => {
-
+const MemeRoute = () => {
+   let location = useLocation();
+   console.log(location)
     return ( 
-        <di>
-           <p >{meme.name}</p>
-           <img src={meme.url}/>
-        </di>
+        <div>
+           <p >{location.state.name}</p>
+           <img src={location.state.url}/> 
+        </div>
      );
 
 }

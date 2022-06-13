@@ -18,7 +18,7 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="expenses" element={<Expenses />} />
       <Route path="invoices" element={<Invoices />} />
-      <Route path="memeRoute" element={<MemeRoute/>}/>
+      <Route path="memeRoute/:id/" element={<MemeRoute/>}/>
     </Routes>
   </BrowserRouter>
 );
